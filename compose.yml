@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  webserver:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: webserver
+    hostname: webserver
+    networks:
+       - webserver-net
+    ports:
+      - "80:80"
+    volumes:
+      - caddy-data:/data:rw
+      - caddy-config:/config:rw
+
+networks:
+  webserver-net:
+    name: webserver-network
+    driver: bridge
+
+volumes:
+  caddy-data:
+    name: caddy-data
+    driver: local
+  caddy-config:
+    name: caddy-config
+    driver: local

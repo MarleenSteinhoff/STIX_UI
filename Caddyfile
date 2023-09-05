@@ -1,0 +1,8 @@
+http://stixserver.seclab.cs.hm.edu {
+	header -Server
+	encode gzip
+	file_server {
+		index index.html
+	}
+	root * /srv
+}
