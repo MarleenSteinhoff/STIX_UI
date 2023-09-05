@@ -15,20 +15,13 @@ export default class TopMenu extends React.Component {
         return (
             <div className="top-menu">
                 <div className="row">
-                    <div data-tip={"Paste JSON"} className="json-paste-btn menu-item-medium" onClick={this.props.onClickShowJsonPasteHandler}>
-                        {"{ + }"}
-                    </div>
 
-                    <div data-tip={"View JSON"} className="json-btn menu-item-small" onClick={this.props.onClickShowJsonHandler}>
-                        {"{ }"}
+                    <div data-tip={"View JSON"} className="json-btn menu-item" onClick={this.props.onClickShowJsonHandler}>
+                        {"Show JSON"}
                     </div>
 
                     <div data-tip={"Clear JSON"} className="reset-btn menu-item" onClick={this.props.onClickResetHandler}>
                         <span className="i material-icons">refresh</span> Reset
-                    </div>
-
-                    <div data-tip={"Submit JSON"} className="reset-btn menu-item" onClick={this.props.onClickSubmitHandler}>
-                        <span className="i material-icons">add</span> Submit
                     </div>
 
                     <Tooltip />
